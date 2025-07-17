@@ -1,22 +1,30 @@
-﻿namespace ModelsAndModelBinding.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ModelsAndModelBinding.Models;
 
 /// <summary>
-/// Animals in the zoo, tells the user which exibits are open to visiting and which are closed
+///
 /// </summary>
 public class Animal
 {
     // what properties are needed for an animal?
-    public string Classification { get; set; } 
+    [StringLength(35)]
+    [Required(ErrorMessage = "Classification is required. For Example: Mammal")]
+    public string Classification { get; set; }
+    [StringLength(35)]
+    [Required(ErrorMessage = "Species is required. For Example: Lion")]
     public string Species { get; set; }
-    // idea may have to be chanaged to a store that sells animal plushies. 
-    // public bool InStock {get; set; } = true; // default value
-    // public int price {get; set;}
-    public bool ExibitOpen { get; private set; } = true; // default value
+    [StringLength(35)]
+    [Required(ErrorMessage = "Location of animal is required.")]
+    public string Location { get; set; }
+    public bool Endangered {get; set; } = false; // default value
 
-    public Animal(string classification, string species, bool exibitOpen)
+    public Animal(string classification, string species, string location, bool endangered)
     {
         Classification = classification;
         Species = species;
-        ExibitOpen = exibitOpen;
+        Location = location;
+        Endangered = endangered;
     }
+
 }
