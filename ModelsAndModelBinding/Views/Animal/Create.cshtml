@@ -10,20 +10,28 @@
     <label asp-for="Classification">Classification: </label>
     <input asp-for="Classification" />
     <span asp-validation-for="Classification"></span>
-
+    <br />
 
     <label asp-for="Species">Species: </label>
     <input asp-for="Species"/>
     <span asp-validation-for="Species"></span>
+    <br />
 
     <label asp-for="Location">Location: </label>
     <input asp-for="Location" />
     <span asp-validation-for="Location"></span>
+    <br />
 
     <label asp-for="Endangered">Endangered: </label>
     <input asp-for="Endangered" />
     <span asp-validation-for="Endangered"></span>
-
+    <br />
 
     <input type="submit" value="Add to Collection"/>
 </form>
+
+@section Scripts {
+    @{ 
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

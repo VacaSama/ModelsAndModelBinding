@@ -29,7 +29,5 @@ public class AnimalController : Controller
         }
         // Show webpage with error message 
         return View(a); 
-
-
     }
 }
