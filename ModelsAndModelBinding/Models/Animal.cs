@@ -3,7 +3,8 @@
 namespace ModelsAndModelBinding.Models;
 
 /// <summary>
-///
+/// An Animal class that represents 
+/// an animal with properties such as Classification, Species, Location, and Endangered status.
 /// </summary>
 public class Animal
 {
