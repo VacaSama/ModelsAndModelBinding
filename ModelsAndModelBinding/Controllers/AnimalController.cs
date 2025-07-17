@@ -30,4 +30,10 @@ public class AnimalController : Controller
         // Show webpage with error message 
         return View(a); 
     }
+
+    // I would add to the database here . ~~~~~~~~~~~~~~~~~
+    // using (SQLConnection con = new SqlConnection(connectionString)){ 
+    //  con.Open(); 
+    //  INSERT the information/ parameters needed into the database
+    //  con.Close();
 }
